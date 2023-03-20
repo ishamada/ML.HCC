@@ -97,7 +97,7 @@ predictions <- predict(rf_model, newdata = test )
 # Evaluate model performance
 cmatrix3 <- confusionMatrix(predictions, test$type)
 
-install.packages("")
+#=============================================== GDCRNATools ======================
 BiocManager::install("ggtree")
 remotes::install_github('YuLab-SMU/ggtree')
 
@@ -116,5 +116,3 @@ gdcRNADownload(project.id     = 'TARGET-AML',
                write.manifest = FALSE,
                method         = 'gdc-client',
                directory      = rnadir2)
-
-
